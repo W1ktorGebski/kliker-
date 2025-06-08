@@ -1,0 +1,42 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiApp4.MainPage">
+
+
+    <AbsoluteLayout x:Name="LayoutGłówny">
+
+        <Label x:Name="LabelWynik"
+               Text="Wynik: 0"
+               FontSize="20"
+               TextColor="Black"
+               AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Label x:Name="LabelCzas"
+               Text="Czas: 30"
+               FontSize="20"
+               TextColor="Black"
+               AbsoluteLayout.LayoutBounds="1,0,AutoSize,AutoSize"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Button Text="Start"
+                x:Name="PrzyciskStart"
+                Clicked="KliknijStart"
+                AbsoluteLayout.LayoutBounds="0.5,0.5,100,50"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <BoxView x:Name="KwadratCel"
+                 Color="Red"
+                 WidthRequest="50"
+                 HeightRequest="50"
+                 IsVisible="False"
+                 AbsoluteLayout.LayoutBounds="0,0,50,50"
+                 AbsoluteLayout.LayoutFlags="None">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="KliknijKwadrat" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+    </AbsoluteLayout>
+</ContentPage>
